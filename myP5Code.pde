@@ -5,7 +5,13 @@ void setup() {
 }
 
 //🎯Variable Declarations Go Here
+
 var rocketX = 25;
+var explosionSize = 10;
+var headSize = 30;
+var eyeSize = 7
+
+
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
@@ -13,16 +19,41 @@ draw = function(){
 
 //rocket
 textSize(50);
+fill(0, 0, 0)
 text("🚀", rocketX, 248);
 
+
 //explosion
-fill(91, 107, 112);
+fill(91, 107, 112, 200);
 noStroke();
-ellipse(552, 231, 30, 30);
+ellipse(552, 231, explosionSize, explosionSize);
+
+//person
+    //head
+        fill(255, 97, 205);
+        ellipse(65, 61, headSize, headSize);
+    //body
+        stroke(255, 97, 205);
+        strokeWeight(2);
+        line(66, 74, 67, 112);
+        line(66, 90, 77, 80);
+        line(66, 90, 55, 80);
+        line(67,112, 55, 124);
+        line(67, 112, 77, 124);
+    //face
+        fill(255, 255, 255);
+        ellipse(59, 59, eyeSize, eyeSize);
+        ellipse(71, 59, eyeSize, eyeSize);
+        arc()
+
 
 rocketX = rocketX + 3
 
 
+if(rocketX > 532){
+explosionSize = 900
+rocketX = 900
+}
 
 
 
