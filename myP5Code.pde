@@ -44,8 +44,8 @@ ellipse(552, 231, explosionSize, explosionSize);
         fill(255, 255, 255);
         ellipse(59, 59, eyeSize, eyeSize);
         ellipse(71, 59, eyeSize, eyeSize);
-        arc()
 
+rect(30, 238, 80, 90);
 
 rocketX = rocketX + 3
 
